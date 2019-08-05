@@ -1,8 +1,12 @@
-export const alan = "Alan";
+const alan = "Alan";
 
+const id = 1;
 
+type YesOrNo = "y" | "n";
 
-function shouldContinue(input: "y" | "n"): boolean {
+const alwaysTrue = true;
+
+function shouldContinue(input: YesOrNo): boolean {
     if(input === "y") {
         return true;
     }
