@@ -17,16 +17,6 @@ const root: Node = {
     ]
 }
 
-
-
-
-
-
-
-
-
-
-
 interface RootNode {
     id: string;
     parent: null;
