@@ -4,12 +4,12 @@ export interface User {
     email: string | null;
 }
 
-type ConstantUser = Readonly<User>;
+export type ConstantUser = Readonly<User>;
 
-type PartialUser = Partial<User>;
+export type PartialUser = Partial<User>;
 
-type RequiredUser = Required<User>;
+export type RequiredUser = Required<User>;
 
-type UserId = Pick<RequiredUser, "id">;
+export type UserId = Pick<RequiredUser, "id">;
 
-type InsertUser = Omit<User, "id">;
+export type InsertUser = Omit<User, "id">;

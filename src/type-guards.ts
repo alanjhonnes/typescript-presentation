@@ -1,18 +1,18 @@
-interface User {
+export interface User {
     id: string;
     name: string;
 }
 
-function isUser(value: any): value is User {
+export function isUser(value: any): value is User {
     return "id" in value && "name" in value;
 }
 
-function isDefined<T>(value: T | null | undefined): value is T {
+export function isDefined<T>(value: T | null | undefined): value is T {
     return value !== undefined;
 } 
 
 
-function test(value: string | number | null | undefined) {
+export function test(value: string | number | null | undefined) {
     if(isDefined(value)) {
         value; // string | number
     }

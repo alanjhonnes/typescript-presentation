@@ -1,13 +1,42 @@
-export class QueryBuilder<E extends object> {
+import { v4 } from "uuid";
 
-    constructor(tableName: string, columns: Array<keyof E>) {
+export type Constructor<T = {}> = new (...args: any[]) => T;
 
-    }
 
-    public createQuery(): this {
-        
-        return this;
+export function identifiable<TBase extends Constructor>(base: TBase) {
+    return class extends base {
+        id = v4();
     }
 }
 
-export class 
+export class Node<T extends string> {
+    constructor(public readonly type: T) {
+
+    }
+}
+
+export const IdentifiableNode = identifiable(Node);
+
+const idNode = new IdentifiableNode("square");
+
+
+
+
+
+export function timestampable<TBase extends Constructor>(base: TBase) {
+    return class extends base {
+        createdAt = new Date();
+        updatedAt = new Date();
+
+        setModified() {
+            this.updatedAt = new Date();
+        }
+    }
+}
+
+export const TimedAndIdentifiedNode = timestampable(IdentifiableNode);
+
+const timedAndIdentifiedNode = new TimedAndIdentifiedNode("square");
+
+timedAndIdentifiedNode.
+

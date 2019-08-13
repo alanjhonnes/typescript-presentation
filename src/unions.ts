@@ -3,8 +3,8 @@ export interface User {
     name: string;
 }
 
-type PossibleUser = User | null;
+export type PossibleUser = User | null;
 
-function isAnonymous(currentUser: PossibleUser): boolean {
+export function isAnonymous(currentUser: PossibleUser): boolean {
     return currentUser === null;
 }

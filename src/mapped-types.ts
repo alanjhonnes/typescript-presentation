@@ -5,13 +5,11 @@ interface SomeObject {
 }
 
 type NullEverything<T> = {
-    [K in keyof T]: T[K];
-    // [P in "a" | "b"]: null;
+    // [K in keyof T]: T[K];
+    [P in "a" | "b"]: null;
 }
 
 type NullAllProps = NullEverything<SomeObject>
-
-
 
 
 type BoolOptions = 'debug' | 'trace' | 'performance';

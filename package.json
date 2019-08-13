@@ -9,10 +9,12 @@
   "author": "Alan Jhonnes <alanjhonnes@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/uuid": "^3.4.5",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^6.0.1",
     "ts-node-dev": "^1.0.0-pre.40",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "uuid": "^3.3.2"
   }
 }
