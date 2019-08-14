@@ -6,6 +6,17 @@ export function noReturn(): void {
 
 }
 
-export function alwaysThrows(): never {
+function alwaysThrows(): never {
+    while (true) {
+
+    }
     throw new Error();
 }
+
+if (idk === null) {
+    idk
+}
+
+if (typeof idk === "string") {
+    idk
+};
