@@ -1,3 +1,6 @@
+export type Bool = true | false;
+
+
 export interface User {
     id: string;
     name: string;

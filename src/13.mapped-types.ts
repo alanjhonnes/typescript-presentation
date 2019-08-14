@@ -4,6 +4,17 @@ interface SomeObject {
     c: boolean;
 }
 
+type keysOfObject = keyof SomeObject;
+
+
+
+
+
+
+
+
+
+
 type NullEverything<T> = {
     // [K in keyof T]: T[K];
     [P in "a" | "b"]: null;

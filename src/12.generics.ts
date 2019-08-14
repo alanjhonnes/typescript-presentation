@@ -22,3 +22,8 @@ export function makeTrackedEntity<E>(entity: E): TrackedEntity<E> {
         data: entity,
     }
 }
+
+export const x = makeTrackedEntity({
+    a: 'a',
+    b: true,
+});

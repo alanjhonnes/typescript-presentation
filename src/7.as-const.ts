@@ -11,4 +11,4 @@ const bigConfigObject = {
         NEXT: 1,
         START: 2
     }
-} as const;
+};
