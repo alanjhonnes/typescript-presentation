@@ -1,7 +1,7 @@
-export let str: string = "";
+export let str = "";
 
-export let numbr: number = 10;
+export let numbr = 10;
 
-export let fn: Function = function() {
+export let fn: Function = function () {
     return true;
 };

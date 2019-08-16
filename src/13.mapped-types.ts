@@ -7,17 +7,9 @@ interface SomeObject {
 type keysOfObject = keyof SomeObject;
 
 
-
-
-
-
-
-
-
-
 type NullEverything<T> = {
-    // [K in keyof T]: T[K];
-    [P in "a" | "b"]: null;
+    [K in keyof T]: T[K];
+    // [P in "a" | "b"]: null;
 }
 
 type NullAllProps = NullEverything<SomeObject>
@@ -29,7 +21,7 @@ type StrOptions = 'application-name' | 'api-url';
 type BoolConfig = { [K in BoolOptions]: boolean };
 type StrConfig = { [K in StrOptions]: string };
 
-type Config = Readonly<BoolConfig & StrConfig>;
+type Config = BoolConfig & StrConfig;
 
 const config: Config = {
     debug: true,

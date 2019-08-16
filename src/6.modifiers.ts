@@ -12,6 +12,6 @@ const user: User = {
 user.name = "Alan";
 user.id = "4321";
 
-if(user.email) {
+if (user.email) {
     user.email.toUpperCase();
 }

@@ -9,6 +9,18 @@ export function identifiable<TBase extends Constructor>(base: TBase) {
     }
 }
 
+interface NodeTyped {
+    type: string;
+}
+
+export function changeableType<TBase extends Constructor<NodeTyped>(base: TBase) {
+    return class extends base {
+        setType(t: string) {
+            this.type = t;
+        }
+    }
+}
+
 export class Node<T extends string> {
     constructor(public readonly type: T) {
 
@@ -18,9 +30,6 @@ export class Node<T extends string> {
 export const IdentifiableNode = identifiable(Node);
 
 const idNode = new IdentifiableNode("square");
-
-
-
 
 
 export function timestampable<TBase extends Constructor>(base: TBase) {
@@ -38,5 +47,5 @@ export const TimedAndIdentifiedNode = timestampable(IdentifiableNode);
 
 const timedAndIdentifiedNode = new TimedAndIdentifiedNode("square");
 
-timedAndIdentifiedNode.
+timedAndIdentifiedNode.setModified();
 

@@ -45,7 +45,9 @@ function todoReducer(state: State, action: TodoAction): State {
 
 const removeTodoAction: RemoveTodoAction = {
     type: TODO_ACTION_TYPE.REMOVE_TODO,
-    payload: { todoId: '1' }
+    payload: {
+        todoId: "1"
+    }
 }
 
 export type EnumLiteral<T> = keyof ;

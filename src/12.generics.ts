@@ -1,9 +1,9 @@
-export function identity(value: any): any {
+export function identity<T>(value: T): T {
     return value;
 }
 
 
-const testGeneric = identity("");
+const testGeneric = identity("dsfsd");
 
 
 
@@ -23,7 +23,6 @@ export function makeTrackedEntity<E>(entity: E): TrackedEntity<E> {
     }
 }
 
-export const x = makeTrackedEntity({
-    a: 'a',
-    b: true,
-});
+export const x = makeTrackedEntity<string>("sdkfj");
+
+x.data.b

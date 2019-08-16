@@ -1,11 +1,11 @@
 export enum ACTION {
-    PLAY,
-    PAUSE,
-    STOP,
+    PLAY = '1',
+    PAUSE = '2',
+    STOP = '3',
 }
 
 function doAction(action: ACTION) {
     console.log(action);
 }
 
-doAction(ACTION.PLAY)
+doAction(ACTION.PAUSE)
